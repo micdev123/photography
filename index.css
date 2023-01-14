@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.flex li{
+    margin: 0 10px;
+    font-size: 0.9rem;
+    color: #6F6681;
+    cursor: pointer;
+}
+
+.flex li:hover {
+    text-decoration: underline;
+    color: #1A093F;
+}
+
+.dark .flex li {
+    color: #e1e1e1;
+}
