@@ -1,3 +1,11 @@
+// Change Navigation When Scroll
+window.addEventListener("scroll", () => {
+    // Target navigation
+    document.querySelector(".navigation").classList.toggle("when__scroll", window.scrollY > 30);
+})
+
+
+// Theme Mode Switching
 const switching = document.querySelector('.mode_switch')
 
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -29,4 +37,13 @@ switching.addEventListener('click', (e) => {
             localStorage.setItem('theme', 'light');
         }
     }
+})
+
+// Toggle mobile nav__links
+const menu__bar = document.querySelector(".menu__bar");
+const menu__nav = document.querySelector(".menu__nav");
+
+// Add click event to menu__bar
+menu__bar.addEventListener('click', () => {
+    menu__nav.classList.toggle("set__visible")
 })
